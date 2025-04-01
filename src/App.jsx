@@ -3,7 +3,7 @@ import Products from './components/Products'
 
 const App = () => {
   return (
-    <div className='max-w-6xl mx-auto'>
+    <div className='max-w-6xl mx-auto px-6 md:px-0'>
       <h1 className='text-4xl font-bold text-gray-800 mt-10'>All Products</h1>
       <Products/>
     </div>

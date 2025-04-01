@@ -45,13 +45,13 @@ const Products = () => {
 
     return (
         <div>
-            <div className='grid grid-cols-4 place-items-center gap-7 mt-10'>
+            <div className='grid grid-cols-2 lg:grid-cols-4 place-items-center gap-7 mt-10 '>
                 {
                     data.slice(page * 4 - 4, page * 4).map((item) => {
-                        return <div key={item.id} className='border border-gray-200 p-5 rounded-md hover:shadow-2xl relative h-max bg-gray-100 transition-all hover:scale-105'>
+                        return <div key={item.id} className='border  border-gray-200 p-5 rounded-md hover:shadow-2xl relative h-max bg-gray-100 transition-all hover:scale-105'>
                             <img src={item.image} alt="" className='aspect-square' />
                             <span className='bg-gray-700 px-3 py-1 rounded-full text-sm text-white absolute top-2 left-2'>{item.category}</span>
-                            <h1 className='mt-1'>{item.title}</h1>
+                            <h1 className='mt-1 line-clamp-2 md:line-clamp-none'>{item.title}</h1>
                             <p className='text-sm text-gray-500 line-clamp-2 mt-1'>{item.description}</p>
                             {/* <div className='flex justify-between items-center'> */}
 
@@ -70,7 +70,7 @@ const Products = () => {
                 }
             </div>
             {
-                data.length > 0 && <div className='flex gap-3 mt-10 justify-center items-center'>
+                data.length > 0 && <div className='flex gap-3 mt-10 justify-center items-center mb-7'>
                     <button disabled={page===1} className={`${page===1?"bg-gray-600":"bg-gray-800"} text-white px-3 py-1 rounded-md cursor-pointer`} onClick={()=>pageHandler(page-1)}>Prev</button>
                     {
                         [...Array(data.length / 4)].map((_, i) => {
