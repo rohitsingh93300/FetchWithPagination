@@ -48,7 +48,7 @@ const Products = () => {
             <div className='grid grid-cols-2 lg:grid-cols-4 place-items-center gap-7 mt-10 '>
                 {
                     data.slice(page * 4 - 4, page * 4).map((item) => {
-                        return <div key={item.id} className='border w-[190px] md:w-[265px]  border-gray-200 p-5 rounded-md hover:shadow-2xl relative h-max bg-gray-100 transition-all hover:scale-105'>
+                        return <div key={item.id} className='border w-[180px] md:w-[265px]  border-gray-200 p-5 rounded-md hover:shadow-2xl relative h-max bg-gray-100 transition-all hover:scale-105'>
                             <img src={item.image} alt="" className='aspect-square ' />
                             <span className='bg-gray-700 px-3 py-1 rounded-full text-sm text-white absolute top-2 left-2'>{item.category}</span>
                             <h1 className='mt-1 line-clamp-2 md:line-clamp-none'>{item.title}</h1>
